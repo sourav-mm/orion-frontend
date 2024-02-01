@@ -1,0 +1,79 @@
+{
+  "faq": [
+    {
+      "id": 1,
+      "show": true,
+      "question": "PIPES & PIPE FITTINGS",
+      "ans": "❖All types of pipes and fiiitngs including guide rails, connectors, flanges etc. Material available in Steel/Aluminium and PVC.",
+      "ans1":"❖Pipes: Stainless Steel, Carbon Steel, Galvanized Steel, Aluminium, Brass/Copper & PVC",
+      "ans2":"❖ Fittings: Threaded,Butt Weld, Socket Weld, Compression (High Pressure and Low Pressure)"
+      
+    },
+    {
+      "id": 2,
+      "question": "FITTINGS",
+      "ans": "Elbow, coupling, union, reducer, olets, tee, cross, plug nipple."
+    },
+    {
+      "id": 3,
+      "question": "ELECTRO-MECHANICAL",
+      "ans": "Pressure/ Temperature Chart Recorders, Single & Dual Pen, Charts and Recorder Pen"
+    },
+    {
+      "id": 4,
+      "question": "SAFETY",
+      "ans": "Personal Protective Equipment: Goggles, Helmets, Gloves, Coverall, Shoe, Masks and it’s filters",
+      "ans1":"Material Safety Equipments",
+      "ans2":"Emergency: Safety Shower, Eye Wash, Emergency Lifting Devices, Custom Made Tapes"
+    },
+    {
+      "id": 5,
+      "question": "WELDING",
+      "ans": "Rods, Holders, Earth Clamps, Welding Glass, Nozzles, Tips, Gloves, Cable etc."
+    },
+    {
+      "id": 6,
+      "question": "OTHER GENERAL ITEMS",
+      "ans": "Diaphragm Pumps for Oil and Gas",
+      "ans1":"Pipe & Tubing Tools",
+      "ans2":"General purpose Hand Tools",
+      "ans3":"Power Tools, Air Tools",
+      "ans4":"Container and it’s parts",
+      "ans5":"Mud Testing Equipment such as Mud Balances & Parts, Viscosity Funnels, Measuring Cups",
+      "ans6":"PH Strips, Half Area Press & Parts, Test Kits, Viscometers"
+    },
+    {
+      "id": 7,
+      "question": "FLANGES",
+      "ans": "Cast Steel, Stainless Steel, Forged Steel, Flanged and Threaded"
+    },
+    {
+      "id": 8,
+      "question": "VALVES",
+      "ans": "Butterfly, Gate, Globe, Check, Safety & Relief."
+    },
+    {
+      "id": 9,
+      "question": "INSTRUMENTATION",
+      "ans": "Instrumentation tubing, fittings and gauges"
+    },
+    {
+      "id": 10,
+      "question": "LIFTING TACKLES",
+      "ans": "Lifting equipment and related accessories of Mild Steel, Carbon Steel, Stainless Steel, Galvanized Steel.",
+      "ans1":"Anchor Chain, Shackle and Accessories",
+      "ans2":"Stainless Steel Link Chain & Shackles Wire Ropes, Pulleys, Cargo Nets, Trolleys, Nylon Slings and PP Ropes"
+    },
+    {
+      "id": 11,
+      "question": "FENDER",
+      "ans": "Rubber Fenders, Used Tyres and Pipe Fenders."
+    },
+    {
+      "id": 12,
+      "question": "ELECTRICAL",
+      "ans": "Power and Control Cables/ Wires.",
+      "ans1":"Cable Tray Systems & Cabling Support (Stainless Steel and Galvanized)"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "testimonialData": [
+    {
+      "id": 1,
+      "title": "What our Client say",
+      "text1": " Happy customer, thanks to OGT's quality.",
+      "reviewer": "Rasalina Willamson",
+      "design": "(ui/ux Designer)",
+      "img": "/assets/img/bg/testimonial.jpg"
+    },
+    {
+      "id": 2,
+      "title": "What our Client say",
+      "text1": " Heartfelt satisfaction, thanks to OGT.",
+      "reviewer": "Rasalina Willamson",
+      "design": "(ui/ux Designer)",
+      "img": "/assets/img/bg/testimonial.jpg"
+    },
+    {
+      "id": 3,
+      "title": "What our Client say",
+      "text1": "it's a pleasure doing business with you.",
+      "reviewer": "Rasalina Willamson",
+      "design": "(ui/ux Designer)",
+      "img": "/assets/img/bg/testimonial.jpg"
+    }
+  ]
+}

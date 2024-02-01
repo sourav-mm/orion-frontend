@@ -20,7 +20,7 @@ const Addwelding = () => {
 
     try {
       const response = await AXIOS.post(
-        "http://localhost:9000/addwelding",
+        "http://orion-frontend-api.vercel.app/addwelding",
         formData
       );
       alert(response.data.msg16);

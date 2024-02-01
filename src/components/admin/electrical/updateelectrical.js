@@ -12,7 +12,7 @@ const Updateelectrical = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AXIOS.get("http://localhost:9000/getupdateelectrical/" + id)
+    AXIOS.get("http://orion-frontend-api.vercel.app/getupdateelectrical/" + id)
       .then((result) => {
         console.log(result);
         setPname(result.data.productname);
@@ -32,7 +32,7 @@ const Updateelectrical = () => {
   
     try {
       const response = await AXIOS.put(
-        `http://localhost:9000/updateelectrical/${id}`,
+        `http://orion-frontend-api.vercel.app/updateelectrical/${id}`,
         formData
       );
   

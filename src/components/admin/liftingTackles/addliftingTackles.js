@@ -20,7 +20,7 @@ const AddliftingTackles = () => {
 
     try {
       const response = await AXIOS.post(
-        "http://localhost:9000/addliftingTackles",
+        "http://orion-frontend-api.vercel.app/addliftingTackles",
         formData
       );
       alert(response.data.msg16);

@@ -32,7 +32,7 @@ const OtherGeneralItemsProduct = () => {
   });
 
   useEffect(() => {
-    AXIOS.get(`http://localhost:9000/getOtherGeneralItemsProduct/${id}`)
+    AXIOS.get(`http://orion-frontend-api.vercel.app/getOtherGeneralItemsProduct/${id}`)
       .then((result) => {
         console.log(result);
         const productData = result.data;
@@ -65,7 +65,7 @@ const OtherGeneralItemsProduct = () => {
 
   // const handleFormSubmit = async () => {
   //   try {
-  //     const response = await AXIOS.post("http://localhost:9000/otherGeneralItems", {
+  //     const response = await AXIOS.post("http://orion-frontend-api.vercel.app/otherGeneralItems", {
   //       ...enquiryFormData,
   //     });
 
@@ -85,7 +85,7 @@ const OtherGeneralItemsProduct = () => {
   //   }
   // };
   const handleFormSubmit = async () => {
-    await AXIOS.post("http://localhost:9000/otherGeneralItems", {
+    await AXIOS.post("http://orion-frontend-api.vercel.app/otherGeneralItems", {
       productname: productname,
       name: name,
       email: email,
@@ -100,7 +100,7 @@ const OtherGeneralItemsProduct = () => {
   const handleFavoriteClick = (productId, e) => {
     const selectedProduct = addprd.find((product) => product._id === productId);
 
-    AXIOS.post("http://localhost:9000/registerFavoriteProduct", selectedProduct)
+    AXIOS.post("http://orion-frontend-api.vercel.app/registerFavoriteProduct", selectedProduct)
       .then((response) => {
         console.log("Product registration response:", response.data);
 
@@ -136,7 +136,7 @@ const OtherGeneralItemsProduct = () => {
             <div key={addprd._id} className="row">
               <div className="col-md-6">
                 <img
-                  src={`http://localhost:9000/${addprd.image}`}
+                  src={`http://orion-frontend-api.vercel.app/${addprd.image}`}
                   alt={addprd.productName}
                   className="img-fluid"
                 />

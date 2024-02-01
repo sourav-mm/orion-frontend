@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const Editvalves = () => {
   const [addvalves, setAddvalves] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deletevalves/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deletevalves/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddvalves/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddvalves/";
     AXIOS.get(URL)
       .then((response) => setAddvalves(response.data))
       .catch((error) => {
@@ -57,7 +57,7 @@ const Editvalves = () => {
                 <tr key={valves._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${valves.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${valves.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

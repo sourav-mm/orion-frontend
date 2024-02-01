@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const Editwelding = () => {
   const [addwelding, setAddwelding] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deletewelding/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deletewelding/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddwelding/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddwelding/";
     AXIOS.get(URL)
       .then((response) => setAddwelding(response.data))
       .catch((error) => {
@@ -57,7 +57,7 @@ const Editwelding = () => {
                 <tr key={welding._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${welding.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${welding.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

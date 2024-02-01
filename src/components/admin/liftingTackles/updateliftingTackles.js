@@ -12,7 +12,7 @@ const UpdateliftingTackles = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AXIOS.get("http://localhost:9000/getupdateliftingTackles/" + id)
+    AXIOS.get("http://orion-frontend-api.vercel.app/getupdateliftingTackles/" + id)
       .then((result) => {
         console.log(result);
         setPname(result.data.productname);
@@ -32,7 +32,7 @@ const UpdateliftingTackles = () => {
   
     try {
       const response = await AXIOS.put(
-        `http://localhost:9000/updateliftingTackles/${id}`,
+        `http://orion-frontend-api.vercel.app/updateliftingTackles/${id}`,
         formData
       );
   

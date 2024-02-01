@@ -12,7 +12,7 @@ const Updateflanges = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AXIOS.get("http://localhost:9000/getupdateflanges/" + id)
+    AXIOS.get("http://orion-frontend-api.vercel.app/getupdateflanges/" + id)
       .then((result) => {
         console.log(result);
         setPname(result.data.productname);
@@ -32,7 +32,7 @@ const Updateflanges = () => {
   
     try {
       const response = await AXIOS.put(
-        `http://localhost:9000/updateflanges/${id}`,
+        `http://orion-frontend-api.vercel.app/updateflanges/${id}`,
         formData
       );
   

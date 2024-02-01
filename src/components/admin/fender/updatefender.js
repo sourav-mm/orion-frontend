@@ -12,7 +12,7 @@ const Updatefender = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AXIOS.get("http://localhost:9000/getupdatefender/" + id)
+    AXIOS.get("http://orion-frontend-api.vercel.app/getupdatefender/" + id)
       .then((result) => {
         console.log(result);
         setPname(result.data.productname);
@@ -32,7 +32,7 @@ const Updatefender = () => {
   
     try {
       const response = await AXIOS.put(
-        `http://localhost:9000/updatefender/${id}`,
+        `http://orion-frontend-api.vercel.app/updatefender/${id}`,
         formData
       );
   

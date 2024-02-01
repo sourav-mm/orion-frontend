@@ -12,7 +12,7 @@ const Updatewelding = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AXIOS.get("http://localhost:9000/getupdatewelding/" + id)
+    AXIOS.get("http://orion-frontend-api.vercel.app/getupdatewelding/" + id)
       .then((result) => {
         console.log(result);
         setPname(result.data.productname);
@@ -32,7 +32,7 @@ const Updatewelding = () => {
   
     try {
       const response = await AXIOS.put(
-        `http://localhost:9000/updatewelding/${id}`,
+        `http://orion-frontend-api.vercel.app/updatewelding/${id}`,
         formData
       );
   

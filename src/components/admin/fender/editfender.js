@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const Editfender = () => {
   const [addfender, setAddfender] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deletefender/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deletefender/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddfender/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddfender/";
     AXIOS.get(URL)
       .then((response) => setAddfender(response.data))
       .catch((error) => {
@@ -57,7 +57,7 @@ const Editfender = () => {
                 <tr key={fender._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${fender.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${fender.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

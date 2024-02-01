@@ -12,7 +12,7 @@ const Updatesafety = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AXIOS.get("http://localhost:9000/getupdatesafety/" + id)
+    AXIOS.get("http://orion-frontend-api.vercel.app/getupdatesafety/" + id)
       .then((result) => {
         console.log(result);
         setPname(result.data.productname);
@@ -32,7 +32,7 @@ const Updatesafety = () => {
   
     try {
       const response = await AXIOS.put(
-        `http://localhost:9000/updatesafety/${id}`,
+        `http://orion-frontend-api.vercel.app/updatesafety/${id}`,
         formData
       );
   

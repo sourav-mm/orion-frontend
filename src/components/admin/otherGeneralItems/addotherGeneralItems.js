@@ -20,7 +20,7 @@ const AddotherGeneralItems = () => {
 
     try {
       const response = await AXIOS.post(
-        "http://localhost:9000/addotherGeneralItems",
+        "http://orion-frontend-api.vercel.app/addotherGeneralItems",
         formData
       );
       alert(response.data.msg16);

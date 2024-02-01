@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const Editfittings = () => {
   const [addfittings, setAddfittings] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deleteFittings/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deleteFittings/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddfittings/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddfittings/";
     AXIOS.get(URL)
       .then((response) => setAddfittings(response.data))
       .catch((error) => {
@@ -57,7 +57,7 @@ const Editfittings = () => {
                 <tr key={fitting._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${fitting.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${fitting.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

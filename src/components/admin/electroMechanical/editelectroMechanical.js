@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const EditelectroMechanical = () => {
   const [addelectroMechanical, setAddelectroMechanical] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deleteelectroMechanical/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deleteelectroMechanical/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddelectroMechanical/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddelectroMechanical/";
     AXIOS.get(URL)
       .then((response) => setAddelectroMechanical(response.data))
       .catch((error) => {
@@ -57,7 +57,7 @@ const EditelectroMechanical = () => {
                 <tr key={electroMechanical._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${electroMechanical.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${electroMechanical.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

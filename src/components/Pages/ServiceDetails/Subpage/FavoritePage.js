@@ -11,7 +11,7 @@ function FavoritePage() {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleDelete = (idno) => {
-    const url = `http://localhost:9000/deletefav/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deletefav/${idno}`;
     AXIOS.delete(url)
       .then((res) => {
         alert(res.data);
@@ -25,7 +25,7 @@ function FavoritePage() {
 
   const fetchData = () => {
     // Fetch data from the 'favoritePage' endpoint
-    AXIOS.get('http://localhost:9000/favoritePage')
+    AXIOS.get('http://orion-frontend-api.vercel.app/favoritePage')
       .then((res) => {
         // Update the state with the fetched data
         setUsers(res.data);
@@ -74,7 +74,7 @@ function FavoritePage() {
             onMouseEnter={() => setHoveredItem(user._id)}
             onMouseLeave={() => setHoveredItem(null)}
           >
-            <Card.Img variant="top" src={`http://localhost:9000/${user.image}`} />
+            <Card.Img variant="top" src={`http://orion-frontend-api.vercel.app/${user.image}`} />
             <Card.Body>
               <Card.Title>{user.productname}</Card.Title>
               <Card.Text>{user.description}</Card.Text>

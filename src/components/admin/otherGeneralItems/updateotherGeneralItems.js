@@ -12,7 +12,7 @@ const UpdateotherGeneralItems = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AXIOS.get("http://localhost:9000/getupdateotherGeneralItems/" + id)
+    AXIOS.get("http://orion-frontend-api.vercel.app/getupdateotherGeneralItems/" + id)
       .then((result) => {
         console.log(result);
         setPname(result.data.productname);
@@ -32,7 +32,7 @@ const UpdateotherGeneralItems = () => {
   
     try {
       const response = await AXIOS.put(
-        `http://localhost:9000/updateotherGeneralItems/${id}`,
+        `http://orion-frontend-api.vercel.app/updateotherGeneralItems/${id}`,
         formData
       );
   

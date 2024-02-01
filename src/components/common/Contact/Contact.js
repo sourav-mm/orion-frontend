@@ -16,7 +16,7 @@ const Contact = () => {
   // };
 
   const handleFormSubmit = async () => {
-    await AXIOS.post("http://localhost:9000/contact", {
+    await AXIOS.post("http://orion-frontend-api.vercel.app/contact", {
       name: name,
       email: email,
       mail: mail,

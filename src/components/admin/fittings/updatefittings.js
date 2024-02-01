@@ -12,7 +12,7 @@ const Updatefittings = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AXIOS.get("http://localhost:9000/getupdatefittings/" + id)
+    AXIOS.get("http://orion-frontend-api.vercel.app/getupdatefittings/" + id)
       .then((result) => {
         console.log(result);
         setPname(result.data.productname);
@@ -32,7 +32,7 @@ const Updatefittings = () => {
   
     try {
       const response = await AXIOS.put(
-        `http://localhost:9000/update/${id}`,
+        `http://orion-frontend-api.vercel.app/update/${id}`,
         formData
       );
   

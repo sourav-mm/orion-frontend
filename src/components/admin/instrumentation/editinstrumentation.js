@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const Editinstrumentation = () => {
   const [addinstrumentation, setAddinstrumentation] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deleteinstrumentation/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deleteinstrumentation/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddinstrumentation/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddinstrumentation/";
     AXIOS.get(URL)
       .then((response) => setAddinstrumentation(response.data))
       .catch((error) => {
@@ -57,7 +57,7 @@ const Editinstrumentation = () => {
                 <tr key={instrumentation._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${instrumentation.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${instrumentation.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

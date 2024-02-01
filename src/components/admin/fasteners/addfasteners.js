@@ -20,7 +20,7 @@ const Addfasteners = () => {
 
     try {
       const response = await AXIOS.post(
-        "http://localhost:9000/addfasteners",
+        "http://orion-frontend-api.vercel.app/addfasteners",
         formData
       );
       alert(response.data.msg16);

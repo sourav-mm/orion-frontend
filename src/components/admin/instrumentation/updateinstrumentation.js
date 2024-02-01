@@ -12,7 +12,7 @@ const Updateinstrumentation = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AXIOS.get("http://localhost:9000/getupdateinstrumentation/" + id)
+    AXIOS.get("http://orion-frontend-api.vercel.app/getupdateinstrumentation/" + id)
       .then((result) => {
         console.log(result);
         setPname(result.data.productname);
@@ -32,7 +32,7 @@ const Updateinstrumentation = () => {
   
     try {
       const response = await AXIOS.put(
-        `http://localhost:9000/updateinstrumentation/${id}`,
+        `http://orion-frontend-api.vercel.app/updateinstrumentation/${id}`,
         formData
       );
   

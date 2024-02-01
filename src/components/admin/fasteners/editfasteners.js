@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const Editfasteners = () => {
   const [addfasteners, setAddfasteners] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deletefasteners/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deletefasteners/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddfasteners/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddfasteners/";
     AXIOS.get(URL)
       .then((response) => setAddfasteners(response.data))
       .catch((error) => {
@@ -57,7 +57,7 @@ const Editfasteners = () => {
                 <tr key={fasteners._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${fasteners.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${fasteners.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

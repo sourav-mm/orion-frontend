@@ -20,7 +20,7 @@ const Addfittings = () => {
 
     try {
       const response = await AXIOS.post(
-        "http://localhost:9000/addfittings",
+        "http://orion-frontend-api.vercel.app/addfittings",
         formData
       );
       alert(response.data.msg15);

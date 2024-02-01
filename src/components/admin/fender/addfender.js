@@ -20,7 +20,7 @@ const Addfender = () => {
 
     try {
       const response = await AXIOS.post(
-        "http://localhost:9000/addfender",
+        "http://orion-frontend-api.vercel.app/addfender",
         formData
       );
       alert(response.data.msg16);

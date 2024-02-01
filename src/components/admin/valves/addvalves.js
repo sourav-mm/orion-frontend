@@ -20,7 +20,7 @@ const Addvalves = () => {
 
     try {
       const response = await AXIOS.post(
-        "http://localhost:9000/addvalves",
+        "http://orion-frontend-api.vercel.app/addvalves",
         formData
       );
       alert(response.data.msg16);

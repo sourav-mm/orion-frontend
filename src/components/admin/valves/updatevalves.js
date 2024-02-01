@@ -12,7 +12,7 @@ const Updatevalves = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AXIOS.get("http://localhost:9000/getupdatevalves/" + id)
+    AXIOS.get("http://orion-frontend-api.vercel.app/getupdatevalves/" + id)
       .then((result) => {
         console.log(result);
         setPname(result.data.productname);
@@ -32,7 +32,7 @@ const Updatevalves = () => {
   
     try {
       const response = await AXIOS.put(
-        `http://localhost:9000/updatevalves/${id}`,
+        `http://orion-frontend-api.vercel.app/updatevalves/${id}`,
         formData
       );
   

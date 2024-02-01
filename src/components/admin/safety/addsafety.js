@@ -20,7 +20,7 @@ const Addsafety = () => {
 
     try {
       const response = await AXIOS.post(
-        "http://localhost:9000/addsafety",
+        "http://orion-frontend-api.vercel.app/addsafety",
         formData
       );
       alert(response.data.msg16);

@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const EditliftingTackles = () => {
   const [addliftingTackles, setAddliftingTackles] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deleteliftingTackles/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deleteliftingTackles/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddliftingTackles/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddliftingTackles/";
     AXIOS.get(URL)
       .then((response) => setAddliftingTackles(response.data))
       .catch((error) => {
@@ -57,7 +57,7 @@ const EditliftingTackles = () => {
                 <tr key={liftingTackles._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${liftingTackles.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${liftingTackles.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

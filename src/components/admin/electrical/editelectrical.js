@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const Editelectrical = () => {
   const [addelectrical, setAddelectrical] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deleteelectrical/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deleteelectrical/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddelectrical/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddelectrical/";
     AXIOS.get(URL)
       .then((response) => setAddelectrical(response.data))
       .catch((error) => {
@@ -58,7 +58,7 @@ const Editelectrical = () => {
                 <tr key={electrical._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${electrical.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${electrical.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

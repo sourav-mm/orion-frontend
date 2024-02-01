@@ -20,7 +20,7 @@ const AddelectroMechanical = () => {
 
     try {
       const response = await AXIOS.post(
-        "http://localhost:9000/addelectroMechanical",
+        "http://orion-frontend-api.vercel.app/addelectroMechanical",
         formData
       );
       alert(response.data.msg16);

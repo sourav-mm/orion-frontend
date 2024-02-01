@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const EditotherGeneralItems = () => {
   const [addotherGeneralItems, setAddotherGeneralItems] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deleteotherGeneralItems/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deleteotherGeneralItems/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddotherGeneralItems/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddotherGeneralItems/";
     AXIOS.get(URL)
       .then((response) => setAddotherGeneralItems(response.data))
       .catch((error) => {
@@ -57,7 +57,7 @@ const EditotherGeneralItems = () => {
                 <tr key={otherGeneralItems._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${otherGeneralItems.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${otherGeneralItems.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

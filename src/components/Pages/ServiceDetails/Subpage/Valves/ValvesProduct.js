@@ -34,7 +34,7 @@ const ValvesProduct = () => {
   });
 
   useEffect(() => {
-    AXIOS.get(`http://localhost:9000/getValvesProduct/${id}`)
+    AXIOS.get(`http://orion-frontend-api.vercel.app/getValvesProduct/${id}`)
       .then((result) => {
         console.log(result);
         const productData = result.data;
@@ -66,7 +66,7 @@ const ValvesProduct = () => {
   };
 
   const handleFormSubmit = async () => {
-    await AXIOS.post("http://localhost:9000/Valves", {
+    await AXIOS.post("http://orion-frontend-api.vercel.app/Valves", {
       productname: productname,
       name: name,
       email: email,
@@ -83,7 +83,7 @@ const ValvesProduct = () => {
     const selectedProduct = addprd.find((product) => product._id === productId);
   
     // Send a POST request to register the product in MongoDB
-    AXIOS.post("http://localhost:9000/registerFavoriteProduct", selectedProduct)
+    AXIOS.post("http://orion-frontend-api.vercel.app/registerFavoriteProduct", selectedProduct)
       .then((response) => {
         // Handle the response if needed
         console.log("Product registration response:", response.data);
@@ -122,7 +122,7 @@ const ValvesProduct = () => {
             <div key={addprd._id} className="row">
               <div className="col-md-6">
                 <img
-                  src={`http://localhost:9000/${addprd.image}`}
+                  src={`http://orion-frontend-api.vercel.app/${addprd.image}`}
                   alt={addprd.productName}
                   className="img-fluid"
                 />

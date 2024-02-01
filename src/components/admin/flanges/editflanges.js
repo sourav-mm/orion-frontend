@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const Editflanges = () => {
   const [addflanges, setAddflanges] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deleteflanges/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deleteflanges/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddflanges/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddflanges/";
     AXIOS.get(URL)
       .then((response) => setAddflanges(response.data))
       .catch((error) => {
@@ -57,7 +57,7 @@ const Editflanges = () => {
                 <tr key={flanges._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${flanges.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${flanges.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

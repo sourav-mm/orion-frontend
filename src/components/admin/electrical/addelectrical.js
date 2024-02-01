@@ -26,7 +26,7 @@ const Addelectrical = () => {
 
     try {
       const response = await AXIOS.post(
-        "http://localhost:9000/addelectrical",
+        "https://orion-frontend-api.vercel.app/addelectrical",
         values
       );
       alert(response.data.msg16);

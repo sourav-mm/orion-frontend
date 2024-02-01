@@ -8,14 +8,14 @@ import { Button, Table } from "react-bootstrap";
 const Editsafety = () => {
   const [addsafety, setAddsafety] = useState([]);
   const deleteItem = (idno) => {
-    const url = `http://localhost:9000/deletesafety/${idno}`;
+    const url = `http://orion-frontend-api.vercel.app/deletesafety/${idno}`;
     AXIOS.delete(url).then((res) => {
       alert(res.data);
     });
   };
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddsafety/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddsafety/";
     AXIOS.get(URL)
       .then((response) => setAddsafety(response.data))
       .catch((error) => {
@@ -57,7 +57,7 @@ const Editsafety = () => {
                 <tr key={safety._id}>
                   <td>
                     <img
-                      src={`http://localhost:9000/${safety.image}`}
+                      src={`http://orion-frontend-api.vercel.app/${safety.image}`}
                       alt="Product Image"
                       style={{ maxWidth: "70px", height: "auto" }}
                     />

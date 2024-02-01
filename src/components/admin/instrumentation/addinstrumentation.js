@@ -20,7 +20,7 @@ const Addinstrumentation = () => {
 
     try {
       const response = await AXIOS.post(
-        "http://localhost:9000/addinstrumentation",
+        "http://orion-frontend-api.vercel.app/addinstrumentation",
         formData
       );
       alert(response.data.msg16);

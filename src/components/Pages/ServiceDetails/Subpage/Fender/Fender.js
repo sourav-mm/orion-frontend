@@ -19,7 +19,7 @@ function Fender() {
 
 
   const allData = () => {
-    const URL = "http://localhost:9000/getaddFender/";
+    const URL = "http://orion-frontend-api.vercel.app/getaddFender/";
     AXIOS.get(URL)
       .then((addprd) => setAddprd(addprd.data))
       .catch((error) => {
@@ -36,7 +36,7 @@ function Fender() {
     const selectedProduct = addprd.find(product => product._id === productId);
   
     // Send a POST request to register the product in MongoDB
-    AXIOS.post("http://localhost:9000/registerFavoriteProduct", selectedProduct)
+    AXIOS.post("http://orion-frontend-api.vercel.app/registerFavoriteProduct", selectedProduct)
       .then((response) => {
         // Handle the response if needed
         console.log("Product registered successfully:", response.data);
@@ -94,7 +94,7 @@ function Fender() {
                   onMouseLeave={() => setHoveredItem(null)}
                 >
                   <img
-                    src={`http://localhost:9000/${addprd.image}`}
+                    src={`http://orion-frontend-api.vercel.app/${addprd.image}`}
                     alt="Your Alt Text"
                     style={{
                       maxWidth: "100%",
